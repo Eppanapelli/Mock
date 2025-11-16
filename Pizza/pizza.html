@@ -7,6 +7,7 @@
     <title>Domino's Pizza</title>
     <style>
         * {
+            padding: 0%;
             margin: 0%;
             font-family: 'Times New Roman', Times, serif;
         }
@@ -16,19 +17,21 @@
             height: 10%;
             border: 2px solid whitesmoke;
             box-shadow: 0px 2px 2px whitesmoke;
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             padding: 20px;
         }
 
-        h1 {
+       #nav h1 {
             color: rgb(4, 4, 175);
         }
 
-        li {
+        #nav li {
             color: rgb(3, 147, 204);
             font-weight: bold;
             display: inline-block;
+           line-height: 40px;
         }
 
         button {
@@ -52,7 +55,6 @@
             gap: 20px;
             padding: 20px;
         }
-
         .pizzadiv {
             background-color: red;
             color: white;
@@ -60,7 +62,9 @@
             line-height: 20px;
             padding: 20px;
         }
-
+        .pizzadiv img {
+            margin: 20px
+        }
         .viewButton {
             background-color: white;
             color: red;
@@ -68,15 +72,20 @@
             text-align: center;
             width: 100px;
             height: 40px;
-            margin-left: 35%;
+            
         }
 
         .explore {
             width: 300px;
             padding: 10px;
             text-align: center;
-            border: 0px 2px 2px whitesmoke;
+            border: 2px solid black;
             padding: 20px;
+            display: grid;
+
+        }
+        .explore img{
+            margin: 20px;
         }
 
         .discover {
@@ -93,14 +102,21 @@
             display: flex;
             justify-content: space-between;
             border: 2px solid black;
+            padding: 20px;
+            background-color: rgb(230, 230, 230);
         }
-
-        .image,.text {
-            float: left;
-        }
-        .image{
+        .image img{
             width: 50%;
-            height: 30%;
+            height: 100%;
+        }
+        .text{
+            padding: 20px;
+            line-height: 30px;
+        }
+        .text img{
+            display: inline-block;
+            width: 50%;
+            
         }
     </style>
 </head>
@@ -109,11 +125,13 @@
     <nav id="nav">
         <h1>Domino's Pizza</h1>
         <div class="nav-container">
+            <ul id="list">
             <li>OUR MENU</li>
             <li>DOMINO'S STORES</li>
             <li>GIFT CARD</li>
             <li>CORPORATE ENQUIRY</li>
             <li>CONTACT</li>
+            </ul>
         </div>
         <button id="button">Download App</button>
     </nav>
